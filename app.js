@@ -1,12 +1,12 @@
-//O principal objetivo deste desafio é fortalecer as habilidades em lógica de programação.
-
-const input = document.querySelector(".input-name"); // Supondo que o input tenha a classe 'input'
-const button = document.querySelector(".button-add"); // Supondo que o botão tenha o ID 'addButton'
-const list = document.querySelector(".name-list"); // Supondo que a lista tenha o ID 'list'
-const sortear = document.querySelector(".button-container"); // Supondo que o botão de sortear tenha o ID 'sortearButton'
-const sorteador = document.querySelector(".button-draw"); // Supondo que o elemento para exibir o sorteado tenha o ID 'sorteador'
+// Criando variaveis para os elementos do HTML
+const input = document.querySelector(".input-name");
+const button = document.querySelector(".button-add");
+const list = document.querySelector(".name-list");
+const sortear = document.querySelector(".button-container");
+const sorteador = document.querySelector(".button-draw");
 const amigos = [];
 
+// Adicionando eventos de click nos botões, para adicionar e sortear
 button.addEventListener("click", function () {
     if (input.value.trim() == "") {
         alert("Digite um nome válido");
@@ -17,6 +17,7 @@ button.addEventListener("click", function () {
     }
 });
 
+// Adicionando evento de click no botão de sortear, para sortear um amigo da lista
 sortear.addEventListener("click", function () {
     if (amigos.length == 0) {
         alert("A lista está vazia");
